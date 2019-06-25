@@ -40,3 +40,8 @@ dependencies {
     testCompile('org.springframework.boot:spring-boot-starter-test')
     testCompile("junit:junit")
 }
+
+test{
+    var1 = ''
+    var2 = ''
+}
