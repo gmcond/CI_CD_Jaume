@@ -13,6 +13,19 @@ cache:
     - $HOME/.gradle/caches/
     - $HOME/.gradle/wrapper/
 
+services:
+  - docker
+
+env:
+  - DOCKER_COMPOSE_VERSION=1.4.2
+
+before_install:
+  - sudo rm /usr/local/bin/docker-compose
+  - curl -L https://github.com/docker/compose/releases/download/${DOCKER_COMPOSE_VERSION}/docker-compose-`uname -s`-`uname -m` > docker-compose
+  - chmod +x docker-compose
+  - sudo mv docker-compose /usr/local/bin
+  - docker-compose up -d
+
 # We can specify a list of JDKs to be used for testing
 # A list of available JDKs in Trusty can be seed in:
 # https://docs.travis-ci.com/user/reference/trusty/#jvm-clojure-groovy-java-scala-images
