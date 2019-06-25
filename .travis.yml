@@ -16,4 +16,4 @@ cache:
 # We can specify a list of JDKs to be used for testing
 # A list of available JDKs in Trusty can be seed in:
 # https://docs.travis-ci.com/user/reference/trusty/#jvm-clojure-groovy-java-scala-images
-jdk: openjdk11
+jdk: openjdk8
