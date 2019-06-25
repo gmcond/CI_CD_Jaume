@@ -47,6 +47,6 @@ public class HelloWorldControllerIT {
   @Test
   public void whenGetHelloEndpointReturnOk() {
     ResponseEntity<String> response = template.getForEntity(base.toString() + "/hello", String.class);
-    assertThat(response.getBody(), equalTo("Hello world222!"));
+    assertThat(response.getBody(), equalTo("Hello world!"));
   }
 }
