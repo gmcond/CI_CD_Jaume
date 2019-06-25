@@ -1,6 +1,7 @@
 buildscript {
     repositories {
         mavenCentral()
+	jcenter()
     }
     dependencies {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:2.0.5.RELEASE")
@@ -11,6 +12,7 @@ group 'interview'
 version '1.0-SNAPSHOT'
 
 repositories {
+    jcenter()
     mavenCentral()
 }
 
