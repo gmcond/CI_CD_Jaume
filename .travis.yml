@@ -3,9 +3,17 @@
 
 # This enables the 'defaults' to test java applications:
 language: java
+dist: xenial
+
+before_cache:
+  - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
+  - rm -fr $HOME/.gradle/caches/*/plugin-resolution/
+cache:
+  directories:
+    - $HOME/.gradle/caches/
+    - $HOME/.gradle/wrapper/
 
 # We can specify a list of JDKs to be used for testing
 # A list of available JDKs in Trusty can be seed in:
 # https://docs.travis-ci.com/user/reference/trusty/#jvm-clojure-groovy-java-scala-images
-jdk:
-  - oraclejdk8
+jdk: openjdk11
